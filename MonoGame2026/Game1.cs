@@ -11,8 +11,13 @@ public class Game1 : Game
     private SpriteBatch _spriteBatch;
 
     private Texture2D _logo;
+    private Texture2D _pongAtlas;
 
     private Vector2 ScreenCenter;
+    
+    bool isRKey_Pressed = false;
+    
+    float speed = 0;
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -38,6 +43,7 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
         _logo =  Content.Load<Texture2D>("Images/logo");
+        _pongAtlas = Content.Load<Texture2D>("Images/pong-atlas");
 
         // TODO: use this.Content to load your game content here
     }
@@ -48,6 +54,15 @@ public class Game1 : Game
             Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
+
+        if (Keyboard.GetState().IsKeyDown(Keys.R) && !isRKey_Pressed)
+        {
+            // R pressed at this frame
+            speed = 500;
+        }
+
+        isRKey_Pressed = Keyboard.GetState().IsKeyDown(Keys.R);
+        
         // TODO: Add your update logic here
 
         base.Update(gameTime);
@@ -65,7 +80,7 @@ public class Game1 : Game
             new Point(_logo.Width, _logo.Height));
 
 
-        float speed = 500;
+     
         _spriteBatch.Draw(
             _logo,
             new Vector2(DestRect.X, DestRect.Y),
@@ -78,6 +93,27 @@ public class Game1 : Game
             SpriteEffects.None,
             0
             );
+        
+        
+        int index = 1;
+        int columns = 2;
+        
+        _spriteBatch.Draw(
+            _pongAtlas,
+            new Vector2(300,300),
+            /*DestRect,*/ 
+            new Rectangle(
+                new Point((int)(index * _pongAtlas.Width / columns),0), 
+                new Point((int)(_pongAtlas.Width / columns), 
+                          (int)(_pongAtlas.Height))
+                ),
+            Color.White,
+            MathHelper.ToRadians(0),
+            new Vector2(_pongAtlas.Width * 0.5f, _pongAtlas.Height * 0.5f),
+            new Vector2(1.0f, 1.0f),
+            SpriteEffects.None,
+            0
+        );
         
         _spriteBatch.End();
 
