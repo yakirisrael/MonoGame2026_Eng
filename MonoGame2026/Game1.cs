@@ -63,14 +63,18 @@ public class Game1 : Game
         Rectangle DestRect = new Rectangle(
             new Point((int)ScreenCenter.X, (int)ScreenCenter.Y),
             new Point(_logo.Width, _logo.Height));
-        
+
+
+        float speed = 500;
         _spriteBatch.Draw(
-            _logo, 
-            DestRect, 
+            _logo,
+            new Vector2(DestRect.X, DestRect.Y),
+            /*DestRect,*/ 
             null,
             Color.White,
-            MathHelper.ToRadians(0),
+            MathHelper.ToRadians((float)gameTime.TotalGameTime.TotalSeconds * speed),
             new Vector2(_logo.Width * 0.5f, _logo.Height * 0.5f),
+            0.5f,
             SpriteEffects.None,
             0
             );
