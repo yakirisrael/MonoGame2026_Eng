@@ -17,6 +17,10 @@ public class Game1 : Game
     
     private Player player = new Player();
     
+    MousePositionText mousePositionText = new MousePositionText();
+    
+    SpriteFont _fontOswald;
+    
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -47,6 +51,10 @@ public class Game1 : Game
         
         player.Start();
         
+        _fontOswald = Content.Load<SpriteFont>("Fonts/OswaldRegular");
+        mousePositionText._font = _fontOswald;
+        mousePositionText.Start();
+
     }
 
     protected override void Update(GameTime gameTime)
@@ -58,6 +66,7 @@ public class Game1 : Game
         // TODO: Add your update logic here
 
         player.Update(gameTime);
+        mousePositionText.Update(gameTime);
         
         base.Update(gameTime);
     }
@@ -70,7 +79,13 @@ public class Game1 : Game
         _spriteBatch.Begin();
         
         player.Draw(_spriteBatch);
+        mousePositionText.Draw(_spriteBatch);
         
+      /*  _spriteBatch.DrawString(
+            _fontOswald,
+            "Hello World!",
+            new Vector2(ScreenCenter.X, 0.0f),
+            Color.White);*/
         
         int index = 1;
         int columns = 2;
