@@ -35,3 +35,4 @@ C:\Users\yakir\RiderProjects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net10.0\Mon
 C:\Users\yakir\RiderProjects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net10.0\MonoGame2026.genruntimeconfig.cache
 C:\Users\yakir\RiderProjects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net10.0\ref\MonoGame2026.dll
 C:\Users\yakir\RiderProjects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net10.0\Content\Fonts\OswaldRegular.xnb
+C:\Users\yakir\RiderProjects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net10.0\Content\Images\pacman.xnb

@@ -10,7 +10,12 @@ public class Sprite : IUpdatable, IDrawable
     public int _sortingOrder = 0;
     public SpriteEffects _spriteEffect = SpriteEffects.None;
     public Texture2D _texture;
-    
+
+    public virtual void Start()
+    {
+        
+    }
+
     public virtual void Update(GameTime gameTime)
     {
         
@@ -27,7 +32,7 @@ public class Sprite : IUpdatable, IDrawable
             MathHelper.ToRadians(_tm.Rotation),
             new Vector2(_texture.Width * 0.5f, _texture.Height * 0.5f),
             _tm.Scale,
-            SpriteEffects.None,
+            _spriteEffect,
             _sortingOrder
         );
     }

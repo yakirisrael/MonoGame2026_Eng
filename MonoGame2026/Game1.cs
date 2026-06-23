@@ -43,9 +43,10 @@ public class Game1 : Game
         
         _pongAtlas = Content.Load<Texture2D>("Images/pong-atlas");
         
-        player._texture = Content.Load<Texture2D>("Images/logo");
+        player._texture = Content.Load<Texture2D>("Images/pacman");
         
-        // TODO: use this.Content to load your game content here
+        player.Start();
+        
     }
 
     protected override void Update(GameTime gameTime)
