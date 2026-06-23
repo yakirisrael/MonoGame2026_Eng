@@ -11,7 +11,7 @@ public class Sprite : IUpdatable, IDrawable
     public SpriteEffects _spriteEffect = SpriteEffects.None;
     public Texture2D _texture;
     
-    public void Update(GameTime gameTime)
+    public virtual void Update(GameTime gameTime)
     {
         
     }

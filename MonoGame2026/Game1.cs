@@ -13,13 +13,9 @@ public class Game1 : Game
     private Texture2D _logo;
     private Texture2D _pongAtlas;
 
-    private Vector2 ScreenCenter;
+    public static Vector2 ScreenCenter;
     
-    bool isRKey_Pressed = false;
-    
-    float speed = 0;
-
-    private Sprite logoSprite = new Sprite();
+    private Player player = new Player();
     
     public Game1()
     {
@@ -45,10 +41,9 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
-        _logo =  Content.Load<Texture2D>("Images/logo");
         _pongAtlas = Content.Load<Texture2D>("Images/pong-atlas");
-
-        logoSprite._texture = _logo;
+        
+        player._texture = Content.Load<Texture2D>("Images/logo");
         
         // TODO: use this.Content to load your game content here
     }
@@ -59,24 +54,10 @@ public class Game1 : Game
             Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
-
-        if (Keyboard.GetState().IsKeyDown(Keys.R) && !isRKey_Pressed)
-        {
-            // R pressed at this frame
-            speed = 500;
-        }
-
-        isRKey_Pressed = Keyboard.GetState().IsKeyDown(Keys.R);
-        
         // TODO: Add your update logic here
 
-        Rectangle DestRect = new Rectangle(
-            new Point((int)ScreenCenter.X, (int)ScreenCenter.Y),
-            new Point(_logo.Width, _logo.Height));
+        player.Update(gameTime);
         
-        logoSprite._tm.Position = new Vector2(DestRect.X, DestRect.Y);
-        logoSprite._tm.Rotation = (float)gameTime.TotalGameTime.TotalSeconds * speed;
-
         base.Update(gameTime);
     }
 
@@ -87,7 +68,7 @@ public class Game1 : Game
         
         _spriteBatch.Begin();
         
-        logoSprite.Draw(_spriteBatch);
+        player.Draw(_spriteBatch);
         
         
         int index = 1;
