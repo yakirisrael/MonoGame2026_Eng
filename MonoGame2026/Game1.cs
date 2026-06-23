@@ -18,6 +18,9 @@ public class Game1 : Game
     bool isRKey_Pressed = false;
     
     float speed = 0;
+
+    private Sprite logoSprite = new Sprite();
+    
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -45,6 +48,8 @@ public class Game1 : Game
         _logo =  Content.Load<Texture2D>("Images/logo");
         _pongAtlas = Content.Load<Texture2D>("Images/pong-atlas");
 
+        logoSprite._texture = _logo;
+        
         // TODO: use this.Content to load your game content here
     }
 
@@ -65,6 +70,13 @@ public class Game1 : Game
         
         // TODO: Add your update logic here
 
+        Rectangle DestRect = new Rectangle(
+            new Point((int)ScreenCenter.X, (int)ScreenCenter.Y),
+            new Point(_logo.Width, _logo.Height));
+        
+        logoSprite._tm.Position = new Vector2(DestRect.X, DestRect.Y);
+        logoSprite._tm.Rotation = (float)gameTime.TotalGameTime.TotalSeconds * speed;
+
         base.Update(gameTime);
     }
 
@@ -74,25 +86,8 @@ public class Game1 : Game
 
         
         _spriteBatch.Begin();
-
-        Rectangle DestRect = new Rectangle(
-            new Point((int)ScreenCenter.X, (int)ScreenCenter.Y),
-            new Point(_logo.Width, _logo.Height));
-
-
-     
-        _spriteBatch.Draw(
-            _logo,
-            new Vector2(DestRect.X, DestRect.Y),
-            /*DestRect,*/ 
-            null,
-            Color.White,
-            MathHelper.ToRadians((float)gameTime.TotalGameTime.TotalSeconds * speed),
-            new Vector2(_logo.Width * 0.5f, _logo.Height * 0.5f),
-            0.5f,
-            SpriteEffects.None,
-            0
-            );
+        
+        logoSprite.Draw(_spriteBatch);
         
         
         int index = 1;

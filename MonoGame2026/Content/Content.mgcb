@@ -13,6 +13,20 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin fonts/OswaldRegular.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:fonts/OswaldRegular.spritefont;Fonts/OswaldRegular
+
+#begin Fonts/OswaldRegular.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/OswaldRegular.spritefont
+
 #begin Images/logo.png
 /importer:TextureImporter
 /processor:TextureProcessor

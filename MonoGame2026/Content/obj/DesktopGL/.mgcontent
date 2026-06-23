@@ -4,10 +4,12 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/yakir/RiderProjects/MonoGame2026_Eng/MonoGame2026/Content/Fonts/OswaldRegular.spritefont</File>
     <File>C:/Users/yakir/RiderProjects/MonoGame2026_Eng/MonoGame2026/Content/Images/logo.png</File>
     <File>C:/Users/yakir/RiderProjects/MonoGame2026_Eng/MonoGame2026/Content/Images/pong-atlas.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
