@@ -81,12 +81,6 @@ public class Game1 : Game
         player.Draw(_spriteBatch);
         mousePositionText.Draw(_spriteBatch);
         
-      /*  _spriteBatch.DrawString(
-            _fontOswald,
-            "Hello World!",
-            new Vector2(ScreenCenter.X, 0.0f),
-            Color.White);*/
-        
         int index = 1;
         int columns = 2;
         

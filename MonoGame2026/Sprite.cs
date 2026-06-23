@@ -18,7 +18,6 @@ public class Sprite : IUpdatable, IDrawable
 
     public virtual void Update(GameTime gameTime)
     {
-        
     }
 
     public void Draw(SpriteBatch spriteBatch)
