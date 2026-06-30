@@ -23,8 +23,8 @@ public class Spritesheet
             int width = (int)(texture.Width * (1.0f /columns));
             int height =  (int)(texture.Height * (1.0f /rows));
             
-            int pos_x = (int)(texture.Width * (x /columns));
-            int pos_y =  (int)(texture.Height * (y /rows));
+            int pos_x = (int)(texture.Width * ((float)x /columns));
+            int pos_y =  (int)(texture.Height * ((float)y /rows));
 
             return new Rectangle(
                 pos_x,

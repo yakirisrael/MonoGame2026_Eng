@@ -28,7 +28,7 @@ public class Sprite : IUpdatable, IDrawable
 
     public virtual void Start()
     {
-        _origin = new Vector2(_texture.Width * 0.5f, _texture.Height * 0.5f);
+        
     }
 
     private Rectangle GetDestRect(Rectangle? sourceRect)
@@ -51,19 +51,22 @@ public class Sprite : IUpdatable, IDrawable
 
     public virtual void Update(GameTime gameTime)
     {
-       // _sourceRect = spritesheet[0, 0];
-        _destRect = GetDestRect(_sourceRect);
+        // origin calculation must happened AFTER the source being update
+        // which is occur in the Animation.update()
+       _origin = new Vector2(_sourceRect.Value.Width * 0.5f, _sourceRect.Value.Height * 0.5f);
+       _destRect = GetDestRect(_sourceRect);
     }
 
     public void Draw(SpriteBatch spriteBatch)
     {
         spriteBatch.Draw(
             _texture,
-            _destRect, 
+            _tm.Position, 
             _sourceRect,
             _color,
             MathHelper.ToRadians(_tm.Rotation),
             _origin,
+            _tm.Scale,
             _spriteEffect,
             _sortingOrder
         );

@@ -26,7 +26,7 @@ public class Player : Animation
         base.Start();
         
         _tm.Position = new Vector2(Game1.ScreenCenter.X, (int)Game1.ScreenCenter.Y);
-        _tm.Scale = new Vector2(1f, 1f);  
+        _tm.Scale = new Vector2(0.3f, 0.3f);  
     }
 
 
@@ -48,12 +48,12 @@ public class Player : Animation
         
         if (Keyboard.GetState().IsKeyDown(Keys.D))
         {
-            _spriteEffect = SpriteEffects.None;
+            _spriteEffect = SpriteEffects.FlipHorizontally;
             _tm.Position += new Vector2(MovementSpeed * dt , 0);
         }
         if (Keyboard.GetState().IsKeyDown(Keys.A))
         {
-            _spriteEffect = SpriteEffects.FlipHorizontally;
+            _spriteEffect = SpriteEffects.None;
             _tm.Position += new Vector2(-MovementSpeed * dt , 0);
         }
         if (Keyboard.GetState().IsKeyDown(Keys.S))

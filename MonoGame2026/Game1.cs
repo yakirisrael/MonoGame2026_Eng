@@ -89,13 +89,13 @@ public class Game1 : Game
         player.Draw(_spriteBatch);
         mousePositionText.Draw(_spriteBatch);
         
-        int index = 1;
+        /*int index = 1;
         int columns = 2;
         
         _spriteBatch.Draw(
             _pongAtlas,
             new Vector2(300,300),
-            /*DestRect,*/ 
+            /*DestRect, 
             new Rectangle(
                 new Point((int)(index * _pongAtlas.Width / columns),0), 
                 new Point((int)(_pongAtlas.Width / columns), 
@@ -108,7 +108,7 @@ public class Game1 : Game
             SpriteEffects.None,
             0
         );
-        
+        */
         _spriteBatch.End();
 
         base.Draw(gameTime);

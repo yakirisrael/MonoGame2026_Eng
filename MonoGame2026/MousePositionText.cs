@@ -9,7 +9,7 @@ public class MousePositionText : Text
     {
         base.Start();
 
-        _tm.Position = Game1.ScreenCenter;
+        _tm.Position = new Vector2(Game1.ScreenCenter.X, 50.0f);
     }
 
     public override void Update(GameTime gameTime)
