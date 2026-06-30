@@ -15,15 +15,18 @@ public class Game1 : Game
 
     public static Vector2 ScreenCenter;
     
-    private Player player = new Player();
+    private Player player = null;
     
     MousePositionText mousePositionText = new MousePositionText();
     
     SpriteFont _fontOswald;
-    
+
+    private SpriteManager _spriteManager;
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
+        _spriteManager = new SpriteManager(Content);
+        
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
         _graphics.IsFullScreen = true;
@@ -47,9 +50,14 @@ public class Game1 : Game
         
         _pongAtlas = Content.Load<Texture2D>("Images/pong-atlas");
         
-        player._texture = Content.Load<Texture2D>("Images/pacman");
+        SpriteManager.AddSprite("pacman", "Images/pacman");
         
+        SpriteManager.AddSprite("orangeBird", "Images/Bird1_1", 4,4);
+        
+        player =  new Player();
         player.Start();
+        
+        player.Play();
         
         _fontOswald = Content.Load<SpriteFont>("Fonts/OswaldRegular");
         mousePositionText._font = _fontOswald;

@@ -9,28 +9,61 @@ public class Sprite : IUpdatable, IDrawable
     public Color _color = Color.White;
     public int _sortingOrder = 0;
     public SpriteEffects _spriteEffect = SpriteEffects.None;
-    public Texture2D _texture;
+    
+    public Spritesheet spritesheet;
+    
+    private Texture2D _texture;
+
+    protected Rectangle? _sourceRect = null;
+    private Rectangle _destRect;
+    
+    private Vector2 _origin = Vector2.Zero;
+
+
+    public Sprite(string spriteName)
+    {
+        spritesheet =  SpriteManager.GetSprite(spriteName);
+        _texture = spritesheet.texture;
+    }
 
     public virtual void Start()
     {
+        _origin = new Vector2(_texture.Width * 0.5f, _texture.Height * 0.5f);
+    }
+
+    private Rectangle GetDestRect(Rectangle? sourceRect)
+    {
+        if (sourceRect == null) return new Rectangle();
         
+        int width = (int)(sourceRect.Value.Width * _tm.Scale.X);
+        int height = (int)(sourceRect.Value.Height * _tm.Scale.Y);
+        
+        int pos_x = (int)(_tm.Position.X - (_origin.X * _tm.Scale.X));
+        int pos_y = (int)(_tm.Position.Y - (_origin.Y * _tm.Scale.Y));
+
+        return new Rectangle(
+            pos_x,
+            pos_y,
+            width,
+            height
+        );
     }
 
     public virtual void Update(GameTime gameTime)
     {
+       // _sourceRect = spritesheet[0, 0];
+        _destRect = GetDestRect(_sourceRect);
     }
 
     public void Draw(SpriteBatch spriteBatch)
     {
         spriteBatch.Draw(
             _texture,
-            _tm.Position,
-            /*DestRect,*/ 
-            null,
+            _destRect, 
+            _sourceRect,
             _color,
             MathHelper.ToRadians(_tm.Rotation),
-            new Vector2(_texture.Width * 0.5f, _texture.Height * 0.5f),
-            _tm.Scale,
+            _origin,
             _spriteEffect,
             _sortingOrder
         );

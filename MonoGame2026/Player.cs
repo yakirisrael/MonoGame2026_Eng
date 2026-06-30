@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonoGame2026;
 
-public class Player : Sprite
+public class Player : Animation
 {
     bool isRKey_Pressed = false;
     
@@ -12,7 +12,7 @@ public class Player : Sprite
     
     float MovementSpeed = 300;
 
-    public Player()
+    public Player() : base( "orangeBird")
     {
 
     }
@@ -23,8 +23,10 @@ public class Player : Sprite
         //      new Point((int)Game1.ScreenCenter.X, (int)Game1.ScreenCenter.Y),
         //      new Point(_texture.Width, _texture.Height));
         
+        base.Start();
+        
         _tm.Position = new Vector2(Game1.ScreenCenter.X, (int)Game1.ScreenCenter.Y);
-        _tm.Scale = new Vector2(0.3f, 0.3f);  
+        _tm.Scale = new Vector2(1f, 1f);  
     }
 
 
