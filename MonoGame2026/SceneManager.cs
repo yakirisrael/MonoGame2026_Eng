@@ -9,6 +9,7 @@ public class SceneManager : IDrawable, IUpdatable
 {
     private static List<IUpdatable> _updatables = new ();
     private static List<IDrawable> _drawables = new();
+    public static List<Collider> _colliders = new();
 
     private static SceneManager instance = null;
 
@@ -34,6 +35,9 @@ public class SceneManager : IDrawable, IUpdatable
         if (obj is IDrawable drawable)
             _drawables.Add(drawable);
         
+        if (obj is Collider collider)
+            _colliders.Add(collider);
+        
         return obj;
     }
 
@@ -44,6 +48,9 @@ public class SceneManager : IDrawable, IUpdatable
         
         if (obj is IDrawable drawable)
             _drawables.Remove(drawable);
+        
+        if (obj is Collider collider)
+            _colliders.Remove(collider);
     }
 
     public void Draw(SpriteBatch spriteBatch)
@@ -51,6 +58,11 @@ public class SceneManager : IDrawable, IUpdatable
         foreach (var drawable in _drawables)
         {
             drawable.Draw(spriteBatch);
+        }
+        
+        foreach (var collider in _colliders)
+        {
+            collider.Draw(spriteBatch);
         }
     }
 
@@ -64,9 +76,14 @@ public class SceneManager : IDrawable, IUpdatable
 
     public void Update(GameTime gameTime)
     {
-        foreach (var updateable in _updatables)
+        for (int i = 0; i <  _updatables.Count; i++)
         {
-            updateable.Update(gameTime);
+            _updatables[i].Update(gameTime);
+        }
+        
+        for (int i = 0; i <  _colliders.Count; i++)
+        {
+            _colliders[i].Update(gameTime);
         }
     }
 }

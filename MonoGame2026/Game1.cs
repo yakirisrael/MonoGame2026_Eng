@@ -64,6 +64,9 @@ public class Game1 : Game
         enemyEgret = SceneManager.Create<Enemy>();
         enemyEgret.Play();
         
+        player.collider._onCollision += player.OnCollisionEnter;
+        player.collider._onTrigger += player.OnTriggerEnter;
+        
         _fontOswald = Content.Load<SpriteFont>("Fonts/OswaldRegular");
         mousePositionText._font = _fontOswald;
 

@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using System.Diagnostics;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -12,11 +14,17 @@ public class Player : Animation
     
     float MovementSpeed = 300;
     
-    public Collider collider = new Collider();
+    public Collider collider = null;
+    
+    Vector2 prevPos = Vector2.Zero;
+    
+    bool isColliding = false;
 
     public Player() : base( "orangeBird")
     {
+        collider = SceneManager.Create<Collider>();
         collider.Parent = this;
+        collider.IsTrigger =  false;
     }
     
     public override void Start()
@@ -29,6 +37,8 @@ public class Player : Animation
         
         _tm.Position = new Vector2(Game1.ScreenCenter.X, (int)Game1.ScreenCenter.Y);
         _tm.Scale = new Vector2(0.3f, 0.3f);  
+        
+        prevPos = _tm.Position;
     }
 
 
@@ -36,7 +46,12 @@ public class Player : Animation
     {
         base.Update(gameTime);
         
-        collider.Update(gameTime);
+        if (isColliding)
+        {
+            _tm.Position = prevPos;
+            isColliding =  false;
+        }
+        prevPos = _tm.Position;
         
         float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
         
@@ -78,9 +93,19 @@ public class Player : Animation
         //To player logic
     }
 
-    public override void Draw(SpriteBatch spriteBatch)
+    public void OnTriggerEnter(Collider self, Collider other)
     {
-        base.Draw(spriteBatch);
-        collider?.Draw(spriteBatch);
+        Console.WriteLine("OnTriggerEnter:" + other + " with " + self);
+        
+        SceneManager.Remove(other);
+        SceneManager.Remove(other.Parent);
+    }
+    
+    public void OnCollisionEnter(Collider self, Collider other)
+    {
+        isColliding = true;
+        Console.WriteLine("OnCollisionEnter:" + other.Parent + " with " + self.Parent);
+        
+
     }
 }
