@@ -11,10 +11,12 @@ public class Player : Animation
     float speed = 0;
     
     float MovementSpeed = 300;
+    
+    public Collider collider = new Collider();
 
     public Player() : base( "orangeBird")
     {
-
+        collider.Parent = this;
     }
     
     public override void Start()
@@ -33,6 +35,8 @@ public class Player : Animation
     public override void Update(GameTime gameTime)
     {
         base.Update(gameTime);
+        
+        collider.Update(gameTime);
         
         float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
         
@@ -64,9 +68,19 @@ public class Player : Animation
         {
             _tm.Position += new Vector2(0 , -MovementSpeed * dt);
         }
-        
-        
+
+        if (Keyboard.GetState().IsKeyDown(Keys.NumPad1))
+        {
+            ChangeSprite("duck");
+        }
+
 
         //To player logic
+    }
+
+    public override void Draw(SpriteBatch spriteBatch)
+    {
+        base.Draw(spriteBatch);
+        collider?.Draw(spriteBatch);
     }
 }

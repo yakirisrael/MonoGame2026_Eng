@@ -16,6 +16,7 @@ public class Game1 : Game
     public static Vector2 ScreenCenter;
     
     private Player player = null;
+    private Enemy enemyEgret = null;
     
     MousePositionText mousePositionText = new MousePositionText();
     
@@ -53,15 +54,21 @@ public class Game1 : Game
         SpriteManager.AddSprite("pacman", "Images/pacman");
         
         SpriteManager.AddSprite("orangeBird", "Images/Bird1_1", 4,4);
+        SpriteManager.AddSprite("duck", "Images/Bird2 Duck_1", 4,4);
+        SpriteManager.AddSprite("egret", "Images/Bird3_Egret4", 4,4);
+        SpriteManager.AddSprite("Pixel", "Images/pixel");
         
-        player =  new Player();
-        player.Start();
-        
+        player = SceneManager.Create<Player>();
         player.Play();
+        
+        enemyEgret = SceneManager.Create<Enemy>();
+        enemyEgret.Play();
         
         _fontOswald = Content.Load<SpriteFont>("Fonts/OswaldRegular");
         mousePositionText._font = _fontOswald;
-        mousePositionText.Start();
+
+        
+        SceneManager.Instance.Start();
 
     }
 
@@ -73,8 +80,9 @@ public class Game1 : Game
 
         // TODO: Add your update logic here
 
-        player.Update(gameTime);
-        mousePositionText.Update(gameTime);
+        SceneManager.Instance.Update(gameTime);
+       
+    //    mousePositionText.Update(gameTime);
         
         base.Update(gameTime);
     }
@@ -86,7 +94,8 @@ public class Game1 : Game
         
         _spriteBatch.Begin();
         
-        player.Draw(_spriteBatch);
+        SceneManager.Instance.Draw(_spriteBatch);
+        
         mousePositionText.Draw(_spriteBatch);
         
         /*int index = 1;

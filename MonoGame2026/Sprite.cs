@@ -12,15 +12,21 @@ public class Sprite : IUpdatable, IDrawable
     
     public Spritesheet spritesheet;
     
-    private Texture2D _texture;
+    protected Texture2D _texture;
 
     protected Rectangle? _sourceRect = null;
-    private Rectangle _destRect;
+    public Rectangle _destRect;
     
     private Vector2 _origin = Vector2.Zero;
 
 
     public Sprite(string spriteName)
+    {
+        ChangeSprite(spriteName);
+        _sourceRect = _texture.Bounds;
+    }
+
+    public void ChangeSprite(string spriteName)
     {
         spritesheet =  SpriteManager.GetSprite(spriteName);
         _texture = spritesheet.texture;
@@ -57,7 +63,7 @@ public class Sprite : IUpdatable, IDrawable
        _destRect = GetDestRect(_sourceRect);
     }
 
-    public void Draw(SpriteBatch spriteBatch)
+    public virtual void Draw(SpriteBatch spriteBatch)
     {
         spriteBatch.Draw(
             _texture,
