@@ -4,6 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Audio/Music/theme.ogg</File>
+    <File>D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Audio/SFX/bounce.wav</File>
+    <File>D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Audio/SFX/collect.wav</File>
     <File>D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Fonts/OswaldRegular.spritefont</File>
     <File>D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Images/B4_s3.png</File>
     <File>D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Images/B4_s5.png</File>
@@ -19,6 +22,9 @@
     <File>D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Images/pong-atlas.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

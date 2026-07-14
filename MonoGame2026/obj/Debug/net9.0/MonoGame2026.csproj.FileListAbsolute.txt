@@ -80,3 +80,7 @@ D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\refint\MonoGame
 D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.pdb
 D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.genruntimeconfig.cache
 D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\ref\MonoGame2026.dll
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Audio\Music\theme.ogg
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Audio\Music\theme.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Audio\SFX\bounce.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Audio\SFX\collect.xnb

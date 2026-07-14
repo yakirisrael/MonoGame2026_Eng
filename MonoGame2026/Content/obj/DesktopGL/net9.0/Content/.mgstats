@@ -1,4 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Audio/Music/theme.ogg","D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/bin/DesktopGL/Content/Audio/Music/theme.xnb","SongProcessor","SongContent",1079706,123,1.4666319
+"D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Audio/SFX/bounce.wav","D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/bin/DesktopGL/Content/Audio/SFX/bounce.xnb","SoundEffectProcessor","SoundEffectContent",50664,50725,0.2617687
+"D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Audio/SFX/collect.wav","D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/bin/DesktopGL/Content/Audio/SFX/collect.xnb","SoundEffectProcessor","SoundEffectContent",22092,22153,0.2332831
 "D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Fonts/OswaldRegular.spritefont","D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/bin/DesktopGL/Content/Fonts/OswaldRegular.xnb","FontDescriptionProcessor","SpriteFontContent",2069,136217,1.1616123
 "D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Images/B4_s3.png","D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/bin/DesktopGL/Content/Images/B4_s3.xnb","TextureProcessor","Texture2DContent",2191067,35932501,3.5254931
 "D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/Images/B4_s5.png","D:/Unity Projects/MonoGame2026_Eng/MonoGame2026/Content/bin/DesktopGL/Content/Images/B4_s5.xnb","TextureProcessor","Texture2DContent",2072957,35932501,2.3005388

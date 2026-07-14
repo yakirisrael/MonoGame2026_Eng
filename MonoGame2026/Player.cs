@@ -87,6 +87,12 @@ public class Player : Animation
         if (Keyboard.GetState().IsKeyDown(Keys.NumPad1))
         {
             ChangeSprite("duck");
+            AudioManager.IsPaused = true;
+        }
+        if (Keyboard.GetState().IsKeyDown(Keys.NumPad2))
+        {
+            //ChangeSprite("duck");
+            AudioManager.IsPaused = false;
         }
 
 
@@ -96,6 +102,8 @@ public class Player : Animation
     public void OnTriggerEnter(Collider self, Collider other)
     {
         Console.WriteLine("OnTriggerEnter:" + other + " with " + self);
+        
+        AudioManager.PlaySongEffect("collect");
         
         SceneManager.Remove(other);
         SceneManager.Remove(other.Parent);

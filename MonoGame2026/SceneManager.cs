@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonoGame2026;
 
@@ -9,7 +11,7 @@ public class SceneManager : IDrawable, IUpdatable
 {
     private static List<IUpdatable> _updatables = new ();
     private static List<IDrawable> _drawables = new();
-    public static List<Collider> _colliders = new();
+    private static List<Collider> _colliders = new();
 
     private static SceneManager instance = null;
 

@@ -1,7 +1,9 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonoGame2026;
 
@@ -23,10 +25,25 @@ public class Game1 : Game
     SpriteFont _fontOswald;
 
     private SpriteManager _spriteManager;
+    private AudioManager _audioManager;
+
+    #region resourcesManagers
+    private ResourcesManager<Texture2D> _textureManager;
+    private ResourcesManager<Song> _songManager;
+    private ResourcesManager<SoundEffect> _soundEffectManager;
+
+    #endregion
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
-        _spriteManager = new SpriteManager(Content);
+        
+        _textureManager = new ResourcesManager<Texture2D>(Content);
+        _songManager = new ResourcesManager<Song>(Content);
+        _soundEffectManager = new ResourcesManager<SoundEffect>(Content);
+        
+        _spriteManager = new SpriteManager();
+        _audioManager = new AudioManager();
+        
         
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
@@ -47,6 +64,11 @@ public class Game1 : Game
 
     protected override void LoadContent()
     {
+        AudioManager.AddSong("theme", "Audio/Music/theme");
+        AudioManager.AddSoundEffect("bounce", "Audio/SFX/bounce");
+        AudioManager.AddSoundEffect("collect", "Audio/SFX/collect");
+        
+        
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
         _pongAtlas = Content.Load<Texture2D>("Images/pong-atlas");
@@ -70,6 +92,7 @@ public class Game1 : Game
         _fontOswald = Content.Load<SpriteFont>("Fonts/OswaldRegular");
         mousePositionText._font = _fontOswald;
 
+        AudioManager.PlaySong("theme");
         
         SceneManager.Instance.Start();
 
