@@ -40,20 +40,6 @@ public class Collider : Sprite
         base.Update(gameTime);
         
         _destRect = Parent._destRect;
-
-        for (int i = 0; i < SceneManager._colliders.Count; i++)
-        {
-            Collider collider = SceneManager._colliders[i];
-            
-            if (collider != this && Intersect(collider))
-            {
-                Notify(this, collider);
-            }
-        }
-        
-
-
-
     }
 
     public override void Draw(SpriteBatch spriteBatch)

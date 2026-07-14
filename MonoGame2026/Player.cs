@@ -24,7 +24,7 @@ public class Player : Animation
     {
         collider = SceneManager.Create<Collider>();
         collider.Parent = this;
-        collider.IsTrigger =  false;
+        collider.IsTrigger =  true;
     }
     
     public override void Start()

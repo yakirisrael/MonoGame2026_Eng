@@ -85,5 +85,20 @@ public class SceneManager : IDrawable, IUpdatable
         {
             _colliders[i].Update(gameTime);
         }
+        
+        for (int i = 0; i < _colliders.Count; i++)
+        {
+            Collider collider = _colliders[i];
+
+            for (int j = i + 1; j < _colliders.Count; j++)
+            {
+                Collider otherCollider = _colliders[j];
+                if (collider.Intersect(otherCollider))
+                {
+                    collider.Notify(collider, otherCollider);
+                    otherCollider.Notify(otherCollider, collider);
+                }
+            }
+        }
     }
 }

@@ -33,3 +33,50 @@ C:\Users\yakir\RiderProjects\MonoGame2026\MonoGame2026\obj\Debug\net9.0\MonoGame
 C:\Users\yakir\RiderProjects\MonoGame2026\MonoGame2026\obj\Debug\net9.0\ref\MonoGame2026.dll
 C:\Users\yakir\RiderProjects\MonoGame2026\MonoGame2026\bin\Debug\net9.0\Content\Images\logo.xnb
 C:\Users\yakir\RiderProjects\MonoGame2026\MonoGame2026\bin\Debug\net9.0\Content\Images\pong-atlas.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Fonts\OswaldRegular.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\B4_s3.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\B4_s5.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\Bird1_1.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\Bird1_3.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\Bird2 Duck_1.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\Bird2 Duck_3.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\Bird3_Egret2.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\Bird3_Egret4.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\logo.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\pacman.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\pixel.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\Content\Images\pong-atlas.xnb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\MonoGame2026.exe
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\MonoGame2026.deps.json
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\MonoGame2026.runtimeconfig.json
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\MonoGame2026.dll
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\MonoGame2026.pdb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\MonoGame.Framework.dll
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\NVorbis.dll
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\android-arm\native\libopenal.so
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\android-arm64\native\libopenal.so
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\android-x64\native\libopenal.so
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\android-x86\native\libopenal.so
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\ios-arm64\native\libopenal.a
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\iossimulator-arm64\native\libopenal.a
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\iossimulator-x64\native\libopenal.a
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\linux-arm64\native\libopenal.so
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\linux-x64\native\libopenal.so
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\osx\native\libopenal.dylib
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\win-x64\native\openal.dll
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\osx\native\libSDL2-2.0.0.dylib
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\bin\Debug\net9.0\runtimes\win-x64\native\SDL2.dll
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\mgcb.tool.restore
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.csproj.AssemblyReference.cache
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.GeneratedMSBuildEditorConfig.editorconfig
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.AssemblyInfoInputs.cache
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.AssemblyInfo.cs
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.csproj.CoreCompileInputs.cache
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.sourcelink.json
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame.780F16B2.Up2Date
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.dll
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\refint\MonoGame2026.dll
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.pdb
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\MonoGame2026.genruntimeconfig.cache
+D:\Unity Projects\MonoGame2026_Eng\MonoGame2026\obj\Debug\net9.0\ref\MonoGame2026.dll

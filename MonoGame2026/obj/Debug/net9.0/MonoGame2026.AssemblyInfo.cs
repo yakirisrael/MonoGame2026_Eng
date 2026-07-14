@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MonoGame2026")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4764f32addf813de317bf1f47941dac70e9e8d63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06da5ee292c3104eab27cb6da8683a9d671f7ddf")]
 [assembly: System.Reflection.AssemblyProductAttribute("MonoGame2026")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MonoGame2026")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
