@@ -24,10 +24,7 @@ public class ResourcesManager<T>  where T : class
         }
 
         if (!_loadedResources.ContainsKey(name))
-        {
-            T resourceLoaded = _content.Load<T>(fileName);
-            _loadedResources[name] = resourceLoaded;
-        }
+            _loadedResources[name] = _content.Load<T>(fileName);;
 
         return _loadedResources[name];
     }

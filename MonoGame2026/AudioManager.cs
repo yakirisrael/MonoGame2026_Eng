@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace MonoGame2026;
 
-public class AudioManager
+public static class AudioManager
 {
     private static List<SoundEffectInstance> _soundEffectsInstances = new();
 

@@ -25,9 +25,9 @@ public class Game1 : Game
     SpriteFont _fontOswald;
 
     private SpriteManager _spriteManager;
-    private AudioManager _audioManager;
 
     #region resourcesManagers
+    
     private ResourcesManager<Texture2D> _textureManager;
     private ResourcesManager<Song> _songManager;
     private ResourcesManager<SoundEffect> _soundEffectManager;
@@ -42,7 +42,6 @@ public class Game1 : Game
         _soundEffectManager = new ResourcesManager<SoundEffect>(Content);
         
         _spriteManager = new SpriteManager();
-        _audioManager = new AudioManager();
         
         
         Content.RootDirectory = "Content";
