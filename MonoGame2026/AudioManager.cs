@@ -6,9 +6,6 @@ namespace MonoGame2026;
 
 public class AudioManager
 {
-    private static ResourcesManager<Song> _songManager;
-    private static ResourcesManager<SoundEffect> _soundEffectManager;
-    
     private static List<SoundEffectInstance> _soundEffectsInstances = new();
 
     private static float prevSongVolume = 1;

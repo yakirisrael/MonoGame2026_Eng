@@ -7,8 +7,6 @@ namespace MonoGame2026;
 public class SpriteManager
 {
     private static Dictionary<string, Spritesheet> _spritesheets = new ();
-    private static ResourcesManager<Texture2D> _textureManager;
-
     public static void AddSprite(string name, string fileName, int columns = 1, int height = 1)
     {
        // load the texture from resources manager

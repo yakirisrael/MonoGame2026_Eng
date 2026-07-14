@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace MonoGame2026;
 
@@ -29,8 +27,6 @@ public class ResourcesManager<T>  where T : class
         {
             T resourceLoaded = _content.Load<T>(fileName);
             _loadedResources[name] = resourceLoaded;
-            
-            return resourceLoaded;
         }
 
         return _loadedResources[name];
