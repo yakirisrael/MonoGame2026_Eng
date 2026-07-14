@@ -23,13 +23,15 @@ public class Sprite : IUpdatable, IDrawable
     public Sprite(string spriteName)
     {
         ChangeSprite(spriteName);
-        _sourceRect = _texture.Bounds;
     }
 
     public void ChangeSprite(string spriteName)
     {
         spritesheet =  SpriteManager.GetSprite(spriteName);
         _texture = spritesheet.texture;
+        
+        // should take the rect of the selected frame
+        _sourceRect = spritesheet[0,0];
     }
 
     public virtual void Start()
